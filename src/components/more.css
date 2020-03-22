@@ -1,0 +1,41 @@
+.title {
+         text-align: center;
+         font-size: 2rem;
+         padding: 2rem;
+         font-weight: bold;
+         color: rgb(93, 166, 184);
+     }
+     
+     .videos-info {
+         display: flex;
+         flex-wrap: wrap;
+         background: rgb(93, 166, 184);
+         box-shadow: 1rem 1rem .5rem rgb(212, 208, 208);
+         width: 70%;
+         padding: 3rem;
+         margin: 2rem auto;
+         border-radius: 1rem;
+     }
+     
+     .videos-info p {
+         color: white;
+     }
+     
+     video {
+         margin: 2rem auto;
+         outline: none;
+     }
+     
+     footer {
+         margin-top: 3rem;
+         padding: 2rem;
+         background: rgb(114, 114, 128);
+         color: white;
+         text-align: center;
+     }
+     
+     @media (max-width:900px) {
+         .videos-info {
+             width: 90vw;
+         }
+     }

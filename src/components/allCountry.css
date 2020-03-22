@@ -1,0 +1,27 @@
+.country {
+         display: flex;
+         flex-wrap: wrap;
+         margin: 5rem 0;
+         text-align: center;
+         justify-items: center;
+         justify-content: center;
+     }
+     .select{
+         margin-top: 2rem;
+         margin-left: 3rem;
+         width: 60vw;
+     }
+     .btn{
+         margin-left: 1rem;
+         margin-top:.5rem;
+     }
+     .country .card {
+         margin: auto 1rem;
+     }
+     
+     .name {
+         margin-top: 9rem;
+         text-align: center;
+         color: green;
+         text-transform: uppercase;
+     }
