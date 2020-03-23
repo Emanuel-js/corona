@@ -53,9 +53,9 @@ this.getData();
             if(err.response.status === 404)
             {
                 this.setState({
-                confirmed:"No data avalible " ,
-                recovery:"No data avalible ",
-                deaths:"No data avalible ",
+                confirmed:"No data available " ,
+                recovery:"No data available ",
+                deaths:"No data available ",
                
             })
             }
@@ -104,4 +104,5 @@ this.getData();
          }
 }
  
+
 export default AllCountry;
