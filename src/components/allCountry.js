@@ -19,34 +19,39 @@ class AllCountry extends Component {
 this.getData();
          }
          async getData (){
-
+///
                  const res =await Axios.get("https://covid-19.mathdro.id/api")
                  const resCountry =await Axios.get("https://covid-19.mathdro.id/api/countries");
-                const countrys =Object.keys(resCountry.data.countries)
+               const countrys =Object.keys(resCountry.data.countries)
+              const cu =countrys.map((cu,i)=>{
+                  return resCountry.data.countries[i].name} )
+            
                  this.setState({
                  confirmed:res.data.confirmed.value ,
                   recovery:res.data.recovered.value,
                   deaths:res.data.deaths.value,
-                  country:countrys
-                  
+                  country:cu,
                  })
+               
+                 
          }
          renderCountryOptions =()=>{
                   return this.state.country.map((country,id)=>{
-                  return <option key={id}>{country}</option>
+                  return <option value={country}key={id}>{country}</option>
                   })
          }
         async getCountryData (e) {
             try{
               
                 const resCountry =await Axios.get(`https://covid-19.mathdro.id/api/countries/${e.target.value}`);
+           
+              
               
                 
             this.setState({
              confirmed:this.numberWithCommas(resCountry.data.confirmed.value) ,
               recovery:this.numberWithCommas(resCountry.data.recovered.value),
               deaths:this.numberWithCommas(resCountry.data.deaths.value),
-              
              })
             }
             catch(err){
@@ -71,12 +76,11 @@ this.getData();
                   return ( 
 
                           <React.Fragment>
-       <select  onChange={this.getCountryData}
-       className="custom-select select custom-select-md mb-3">
-  <option selected disabled>Search by Country Name</option>
+       <select name="name" onChange={this.getCountryData} className="custom-select select custom-select-md mb-3">
+  <option selected disabled value="">Search by Country Name</option>
 {this.renderCountryOptions()}
 </select>
-        <button onClick={this.renderCountryOptions()} className="btn btn-success" type="submit">Search</button>
+        <button onClick={this.renderCountryOptions} className="btn btn-success" type="submit">Search</button>
                   <h1 className="name">{this.state.name}</h1>
     <div className="country">
 
@@ -99,10 +103,10 @@ this.getData();
             </div>
         </div>
     </div>
+
                           </React.Fragment> 
                    );
          }
 }
  
-
 export default AllCountry;
