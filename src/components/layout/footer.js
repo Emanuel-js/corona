@@ -5,8 +5,8 @@ const Footer=()=>{
 return(
         <footer>
 
-        @copyright
-    <span class="year">{datas}</span> Emanuel Awol
+       <i></i>
+    <span class="year">	&copy;{datas}</span> developed by Emanuel Awol 
     </footer>
     )
 }
