@@ -38,7 +38,7 @@ const myChartRefworld =this.chartRef2.current.getContext('2d');
 /// world data 
 new Chart(myChartRefworld, {
    
-    type: 'doughnut', //bar,horizontalBar,pie,line,doughnut,radar,polarArea
+    type: 'bar', //bar,horizontalBar,pie,line,doughnut,radar,polarArea
     data: {
         labels: ['deaths', 'confirmed', 'recovered'],
         datasets: [{
@@ -201,7 +201,7 @@ numberWithCommas(x) {
         <p>Voice Message <big>444</big></p>
         <h5>other website for more information</h5>
         
-            <Link className="link"to="www.who.int"><big>www.who.int</big></Link>
+            <a className="link"href="https://www.who.int"><big>www.who.int</big></a>
     </div>
        <a className="top" href="#">Top</a>
        </React.Fragment>
